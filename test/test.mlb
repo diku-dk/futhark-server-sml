@@ -1,0 +1,5 @@
+local $(SML_LIB)/basis/basis.mlb
+      ../lib/github.com/diku-dk/futhark-data-sml/futhark-data.mlb
+      ../lib/github.com/diku-dk/futhark-server-sml/futhark-server.mlb
+in test.sml
+end

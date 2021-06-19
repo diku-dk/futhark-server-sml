@@ -1,0 +1,5 @@
+package github.com/diku-dk/futhark-server-sml
+
+require {
+  github.com/diku-dk/futhark-data-sml 0.1.1 #df13e7d207ebb0806ae486b11a3fd20181ab129b
+}
