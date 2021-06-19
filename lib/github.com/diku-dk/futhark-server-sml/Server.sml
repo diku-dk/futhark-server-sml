@@ -29,7 +29,7 @@ fun responseLines stream =
           | _ => l :: responseLines stream)
 
 fun checkForFailure [] = []
-  | checkForFailure ("%%% FAILURE"::ls) = raise CmdFailure (concat ls)
+  | checkForFailure ("%%% FAILURE\n"::ls) = raise CmdFailure (concat ls)
   | checkForFailure (l::ls) = l :: checkForFailure ls
 
 fun startServer prog opts : server =
