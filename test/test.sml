@@ -74,7 +74,7 @@ fun test () =
         val y = Helper.varFromValue s (Convert.i64.toFuthark (Int64.fromInt 100))
         val [res] = Helper.call s "sum_i64_range" [x,y]
         val res_sml = Convert.i64.fromFuthark (Helper.varToValue s res)
-        val () = print("Result: " ^ Int64.toString res_sml)
+        val () = print("Result: " ^ Int64.toString res_sml ^ "\n")
         val () = Server.stopServer s
     in () end
 
