@@ -1,4 +1,4 @@
-# futhark-server-sml [![CI](https://github.com/diku-dk/futhark-server-sml/workflows/build/badge.svg)](https://github.com/diku-dk/futhark-server-sml/actions)
+# futhark-server-sml [![CI](https://github.com/diku-dk/futhark-server-sml/workflows/CI/badge.svg)](https://github.com/diku-dk/futhark-server-sml/actions)
 
 A Standard ML implementation of the
 [Futhark](https://futhark-lang.org) [server
