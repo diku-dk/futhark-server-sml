@@ -27,7 +27,7 @@ your own project's `mlb`-files.
 
 ## Usage
 
-[See very simple example program.](test/test.sml)
+[See this very simple example program.](test/test.sml)
 
 ## Compatibility
 

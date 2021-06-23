@@ -1,3 +1,14 @@
+(* Assumes that the name of a Futhark server executable is passed as
+the first command line argument.
+
+E.g:
+
+$ futhark c --server test/futlib.fut
+$ mlton -output test/test test/test.mlb
+$ test/test test/futlib
+
+ *)
+
 fun test () =
     let val s = Server.startServer (List.nth (CommandLine.arguments (),0)) []
         val x = ServerVars.varFromValue s (Convert.i64.toFuthark (Int64.fromInt 10))
