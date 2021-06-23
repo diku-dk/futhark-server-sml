@@ -1,5 +1,8 @@
 local $(SML_LIB)/basis/basis.mlb
+      ../futhark-data-sml/futhark-data.mlb
 in
 SERVER.sig
 Server.sml
+SERVER_VARS.sig
+ServerVars.sml
 end

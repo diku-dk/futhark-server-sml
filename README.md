@@ -10,8 +10,10 @@ SML programs.
 
 * [lib/github.com/diku-dk/futhark-server-sml/futhark-server.mlb](lib/github.com/diku-dk/futhark-server-sml/futhark-server.mlb):
 
-  * **signature [SERVER](lib/github.com/diku-dk/futhark-server-sml/SERVER.sig)** (also the documentation)
-  * **structure Server**
+  * **signature [SERVER](lib/github.com/diku-dk/futhark-server-sml/SERVER.sig)** (low-level interface)
+  * **structure Server :> SERVER**
+  * **signature [SERVER_VARS](lib/github.com/diku-dk/futhark-server-sml/SERVER_VARS.sig)** (high-level interface)
+  * **structure ServerVars :> SERVER_VARS**
 
 ## Installation via [smlpkg](https://github.com/diku-dk/smlpkg)
 
@@ -25,4 +27,11 @@ your own project's `mlb`-files.
 
 ## Usage
 
-[See also this very simple example program.](test/test.sml)
+[See very simple example program.](test/test.sml)
+
+## Compatibility
+
+Tested with MLton and MLKit.  Should in principle work with any SML
+implementation that supports a reasonable subset of the Basis library
+(e.g. SML/NJ), but you may need to manually load the files if they
+don't support MLB.

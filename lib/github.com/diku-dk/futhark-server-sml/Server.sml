@@ -1,4 +1,4 @@
-structure Server : SERVER = struct
+structure Server :> SERVER = struct
 
 type server = {proc: (TextIO.instream, TextIO.outstream) Unix.proc,
                stdin: TextIO.outstream,
