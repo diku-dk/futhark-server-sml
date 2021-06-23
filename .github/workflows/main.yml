@@ -12,6 +12,11 @@ jobs:
           echo "OS=$(uname -s | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
           echo "RUNHOME=$(echo $HOME)" >> $GITHUB_ENV
 
+      - name: Install Debian packages
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y mlton make
+
       - name: Install Futhark
         run: |
           wget http://futhark-lang.org/releases/futhark-nightly-linux-x86_64.tar.xz
@@ -39,6 +44,6 @@ jobs:
 
       - run: |
           smlpkg sync
-          futhark c --library test/futlib.fut
-          mlkit -o test/test test/test.mlb
-          test/test test/futlib
+          futhark c --server test/futlib.fut
+          # mlkit -o test/test test/test.mlb && test/test test/futlib
+          mlton -output test/test test/test.mlb && test/test test/futlib
