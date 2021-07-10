@@ -3,8 +3,7 @@
 A Standard ML implementation of the
 [Futhark](https://futhark-lang.org) [server
 protocol](https://futhark.readthedocs.io/en/latest/server-protocol.html),
-allowing simple relatively simple interoperability between Futhark and
-SML programs.
+allowing simple interoperability between Futhark and SML programs.
 
 ## Overview of MLB files
 
